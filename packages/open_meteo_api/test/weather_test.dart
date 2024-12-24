@@ -7,10 +7,10 @@ void main() {
       test('returns correct Weather object', () {
         expect(
           Weather.fromJson(
-              <String, dynamic>{'temperature': 15.3, 'weather_code': 63}),
+              <String, dynamic>{'temperature': 15.3, 'weathercode': 63}),
           isA<Weather>()
               .having((w) => w.temperature, 'temperature', 15.3)
-              .having((w) => w.weatherCode, 'weatherCode', 63),
+              .having((w) => w.weathercode, 'weathercode', 63),
         );
       });
     });

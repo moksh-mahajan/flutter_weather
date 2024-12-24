@@ -24,7 +24,7 @@ class OpenMeteoApiClient {
     final locationRequest = Uri.https(
       _baseUrlGeocoding,
       '/v1/search',
-      {'name': query, 'count': 1},
+      {'name': query, 'count': '1'},
     );
 
     final locationResponse = await _httpClient.get(locationRequest);
@@ -48,7 +48,7 @@ class OpenMeteoApiClient {
     required double latitude,
     required double longitude,
   }) async {
-    final weatherRequest = Uri.https(_baseUrlWeather, 'v1/forecast', {
+    final weatherRequest = Uri.https(_baseUrlWeather, '/v1/forecast', {
       'latitude': '$latitude',
       'longitude': '$longitude',
       'current_weather': 'true'
