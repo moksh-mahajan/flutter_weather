@@ -94,12 +94,12 @@ class WeatherCubit extends HydratedCubit<WeatherState> {
   }
 
   @override
-  Map<String, dynamic>? toJson(WeatherState state) {
+  Map<String, dynamic> toJson(WeatherState state) {
     return state.toJson();
   }
 }
 
-extension on double {
+extension DoubleXTemperature on double {
   double toFahrenheit() => (this * 9 / 5) + 32;
   double toCelsius() => (this - 32) * 5 / 9;
 }
